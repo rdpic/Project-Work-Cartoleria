@@ -1,0 +1,317 @@
+@charset "utf-8";
+html {
+    scroll-behavior: smooth;
+  }
+* {
+    font-size: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   }
+
+ 
+   body, html{
+    background-image: linear-gradient(to right, #0a0a0a,
+    #000000);
+}
+.container-fluid {
+    width: 100%;
+    height: 100%;
+}
+/*navbar*/
+.nav-link {
+    padding: 10px 20px 5px 20px;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+
+}
+.nav-link::before {
+   content: "";
+    height: 3px;
+    width: 0%;
+    background-color:#d6b43a;
+   
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+    transition: all 0.1s ease-in-out;
+}
+.nav-link:hover::before {
+    
+     width: 100%;
+    
+ }
+nav {
+    height: 100px;
+    background-color: black;
+  
+  
+}
+.navbar{ background-image: linear-gradient(to right, #0a0a0a,
+    #000000);
+    color: #FFDB58;}
+
+.container .form-control {
+    border-radius: 20px;
+    margin-top: 25px;
+    max-width: 250px;
+}
+
+/*Rendo i pulsanti piu interattivi*/
+.container .btn-primary{
+    background-color: #581845 ;
+    color: #FFDB58;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 55px;
+    box-shadow: 0 6px 0 0  #401123;
+    transition: all 0.1s ease-in-out;
+}
+.btn-primary:active{
+    transform: translateY(10px);
+    box-shadow: 0 0 0 0  #401123;
+}
+
+.container .btn-light{
+    background-color: #581845 ;
+    color: #FFDB58;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 55px;
+    box-shadow: 0 6px 0 0  #401123;
+    transition: all 0.1s ease-in-out;
+    margin-top: 15px;
+}
+.btn-light:active{
+    transform: translateY(10px);
+    box-shadow: 0 0 0 0  #401123;
+}
+
+.container .btn-outline-success {
+    background-color: green;
+    color: rgb(1, 57, 1);
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 55px;
+    box-shadow: 0 10px 0 0  darkgreen;
+    transition: all 0.1s ease-in-out;
+
+}
+.btn-outline-success:active{
+    transform: translateY(10px);
+    box-shadow: 0 0 0 0  darkgreen;
+}
+/* Idem per icone dei social*/
+.social{
+
+  
+    height: 75px;
+    width: 75px;
+}
+.social-icon1{
+    transition: all 0.1s ease-in-out;
+}
+
+.social-icon1:hover{
+    transform: translateY(25px);
+}
+
+.social-icon2{
+    transition: all 0.1s ease-in-out;
+}
+
+.social-icon2:hover{
+    transform: translateY(25px);
+}
+.social-icon3{
+    transition: all 0.1s ease-in-out;
+}
+
+.social-icon3:hover{
+    transform: translateY(25px);
+}
+.social-icon4{
+    transition: all 0.1s ease-in-out;
+}
+
+.social-icon4:hover{
+    transform: translateY(25px);
+}
+.social-icon5{
+    transition: all 0.1s ease-in-out;
+}
+
+
+/*banner e contenuto*/
+#banner {
+    background-image: linear-gradient(to right, #0a0a0a,
+    #000000);
+    color: #FFDB58;
+    padding-top: 5%;
+    font-family: "Vollkorn";
+
+}
+
+input {
+    border-radius: 15px;
+    color: #54BAB9;
+}
+
+.promo-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 100px;
+    font-family: "Vollkorn";
+    
+}
+
+/*onda sotto al banner*/
+.bottom-img {
+    width: 100%;
+}
+
+/*i servizi*/
+#services {
+    padding: 80px 0;
+    font-family: "Vollkorn";
+    color: #581845 ;
+    background-color: #f8f9fa;
+margin-top: -18px;
+}
+
+.services {
+    padding: 20px;
+}
+
+.services h6 {
+    padding: 5px;
+    padding-top: 25px;
+    text-transform: uppercase;
+}
+
+.service1 {
+    width: 100px;
+    margin-top: 20px;
+}
+
+
+.title::before {
+    content: '';
+    background:  #581845 ;;
+    height: 2px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(63px);
+}
+
+.title::after {
+    content: '';
+    background:#581845 ;
+    height: 10px;
+    width: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(8px);
+}
+
+
+
+
+
+
+
+
+/* i social nel footer */
+
+#social-media {
+  background-color: #f8f9fa;
+    padding: 100px 0;
+   color:#581845;
+}
+
+#social-media p {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.social-icons img {
+    width: 60px;
+    transition: 0.5s;
+}
+
+.social-icons a:hover img {
+    transform: translateY(-10px);
+}
+
+/*I LINK*/
+a:link {
+    text-decoration: none;
+
+    font-family: "Vollkorn";
+}
+
+/* link non visitato */
+a:link {
+    color: rgb(6, 4, 4);
+}
+
+
+
+/* mouse sul link; a:hover DEVE venire dopo a:link e a:visited in CSS*/
+a:hover {
+    color: hotpink;
+}
+
+
+
+
+
+#footer { 
+    background-image: linear-gradient(to right, #0a0a0a,
+    #000000);
+    color: #FFDB58;
+
+
+}
+
+.footer-img {
+    width: 100%;
+}
+
+.footer-box {
+    padding: 20px;
+}
+
+.footer-box img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-box .form-control {
+    border-radius: 20px;
+    margin-top: 25px;
+    max-width: 250px;
+}
+
+.footer-box .btn-primary {
+    border-radius: 20px;
+    margin-top: 25px;
+    box-shadow: none;
+    border: none;
+    background-color: black;
+    color: #FFE8DF;
+}
