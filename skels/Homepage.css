@@ -35,7 +35,7 @@ html {
     content: "";
     height: 3px;
     width: 0%;
-    background-color: #d6b43a;
+    background-color:#c09561 ;
 
     position: absolute;
     bottom: 0;
@@ -52,7 +52,7 @@ html {
 
 nav {
     height: 100px;
-    background-color: #f8f4ef
+    background-color: #c09561
     ;
 
 
@@ -63,7 +63,7 @@ nav {
     ,
     #f8f4ef
     );
-    color: #FFDB58;
+    color: #c09561;
 }
 
 .container .form-control {
@@ -78,60 +78,24 @@ nav {
 
 }
 /*Rendo i pulsanti piu interattivi*/
-.container .btn-primary {
-    background-color: #581845;
-    color: #FFDB58;
-    border: none;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none;
-    border-radius: 55px;
-    box-shadow: 0 6px 0 0 #401123;
-    transition: all 0.1s ease-in-out;
-}
-
-.btn-primary:active {
-    transform: translateY(10px);
-    box-shadow: 0 0 0 0 #401123;
-}
 
 .container .btn-light {
-    background-color: #581845;
-    color: #FFDB58;
+    background-color: #c09561;
+    color: #956f41;
     border: none;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
     user-select: none;
     border-radius: 55px;
-    box-shadow: 0 6px 0 0 #401123;
+    box-shadow: 0 6px 0 0 #8b622f;
     transition: all 0.1s ease-in-out;
     margin-top: 15px;
 }
 
 .btn-light:active {
     transform: translateY(10px);
-    box-shadow: 0 0 0 0 #401123;
-}
-
-.container .btn-outline-success {
-    background-color: green;
-    color: rgb(1, 57, 1);
-    border: none;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none;
-    border-radius: 55px;
-    box-shadow: 0 10px 0 0 darkgreen;
-    transition: all 0.1s ease-in-out;
-
-}
-
-.btn-outline-success:active {
-    transform: translateY(10px);
-    box-shadow: 0 0 0 0 darkgreen;
+    box-shadow: 0 0 0 0 #956b37;
 }
 
 /* Idem per icone dei social*/
@@ -185,7 +149,7 @@ nav {
     ,
     #f8f4ef
     );
-    color: #FFDB58;
+    color: #c09561;
     padding-top: 5%;
     font-family: "Vollkorn";
 
@@ -220,7 +184,7 @@ input {
 #services {
     padding: 80px 0;
     font-family: "Vollkorn";
-    color: #581845;
+    color: #c09561;
     background-color: #f8f9fa;
     margin-top: -18px;
 }
@@ -243,7 +207,7 @@ input {
 
 .title::before {
     content: '';
-    background: #581845;
+    background: #c09561;
     ;
     height: 2px;
     width: 200px;
@@ -255,7 +219,7 @@ input {
 
 .title::after {
     content: '';
-    background: #581845;
+    background: #c09561;
     height: 10px;
     width: 40px;
     margin-bottom: 40px;
@@ -270,7 +234,7 @@ input {
 #social-media {
     background-color: #f8f9fa;
     padding: 100px 0;
-    color: #581845;
+    color: #c09561;
 }
 
 #social-media p {
@@ -304,19 +268,15 @@ a:link {
 
 /* mouse sul link; a:hover DEVE venire dopo a:link e a:visited in CSS*/
 a:hover {
-    color: hotpink;
+    color: #c09561;
 }
-
-
-
-
 
 #footer {
     background-image: linear-gradient(to right, #f8f4ef
     ,
     #f8f4ef
     );
-    color: #FFDB58;
+    color: #c09561;
 
 
 }
