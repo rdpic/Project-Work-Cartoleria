@@ -112,7 +112,7 @@ public class ContextConfiguration implements WebMvcConfigurer
 		LocalContainerEntityManagerFactoryBean bean = new LocalContainerEntityManagerFactoryBean();
 		bean.setJpaVendorAdapter(getJpaVendorAdapter());
 		bean.setDataSource(getDataSource());
-		bean.setPackagesToScan("it.corso.model");
+		bean.setPackagesToScan("pw.model");
 		bean.setSharedCacheMode(SharedCacheMode.ENABLE_SELECTIVE);
 		bean.setValidationMode(ValidationMode.NONE);
 		return bean;
