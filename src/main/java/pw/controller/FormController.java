@@ -39,7 +39,7 @@ public class FormController {
 	@PostMapping
 	public String registraUtente(@Valid @ModelAttribute("utente") Utente utente, BindingResult result) {
 		if (result.hasErrors())
-			return "utenti";
+			return "/";
 		if (utente.getId() != 0) {
 			Profilo profilo = profiloDao.findById(utente.getId()).get();
 			profilo.setUsername(utente.getProfilo().getUsername());
@@ -47,7 +47,7 @@ public class FormController {
 			utente.setProfilo(profilo);
 		}
 		utenteDao.save(utente);
-		return "redirect:/utenti";
+		return "redirect:/";
 	}
 	
 }
