@@ -82,7 +82,7 @@ nav {
     height: 100%;
     margin-bottom: 0px;
     background-color: white;
-    color: #581845;
+    color: #8b622f;
     text-align: center;
     margin-left: 15px;
     margin-right: 15px;
@@ -92,7 +92,7 @@ nav {
 
 .card-header{
     background-color: white;
-    color: #581845;
+    color: #8b622f;
 }
 .card-body{
     background-image: linear-gradient(rgb(240, 227, 227), rgb(227, 224, 224));
@@ -100,12 +100,12 @@ nav {
 .card-title {
     text-align: center;
     font-size: larger;
-    color: #581845;
+    color: #8b622f;
 }
 
 .card-text {
     text-align: justify;
-    color: #581845;
+    color: #8b622f;
 }
 
 .social {
@@ -117,57 +117,44 @@ nav {
 
 }
 /*Rendo i pulsanti piu interattivi*/
-.container .btn-primary{
-    background-color: #581845 ;
-    color: #FFDB58;
+.card .btn-light {
+    background-color: #c09561;
+    color: #956f41;
     border: none;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
     user-select: none;
     border-radius: 55px;
-    box-shadow: 0 6px 0 0  #401123;
-    transition: all 0.1s ease-in-out;
-}
-.btn-primary:active{
-    transform: translateY(10px);
-    box-shadow: 0 0 0 0  #401123;
-}
-
-.container .btn-light{
-    background-color: #581845 ;
-    color: #FFDB58;
-    border: none;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none;
-    border-radius: 55px;
-    box-shadow: 0 6px 0 0  #401123;
+    box-shadow: 0 6px 0 0 #8b622f;
     transition: all 0.1s ease-in-out;
     margin-top: 15px;
 }
-.btn-light:active{
+
+.btn-light:active {
     transform: translateY(10px);
-    box-shadow: 0 0 0 0  #401123;
+    box-shadow: 0 0 0 0 #956b37;
 }
-.container .btn-outline-success {
-    background-color: green;
-    color: rgb(1, 57, 1);
+.container .btn-light {
+    background-color: #c09561;
+    color: #956f41;
     border: none;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
     user-select: none;
     border-radius: 55px;
-    box-shadow: 0 10px 0 0  darkgreen;
+    box-shadow: 0 6px 0 0 #8b622f;
     transition: all 0.1s ease-in-out;
+    margin-top: 15px;
+}
 
-}
-.btn-outline-success:active{
+.btn-light:active {
     transform: translateY(10px);
-    box-shadow: 0 0 0 0  darkgreen;
+    box-shadow: 0 0 0 0 #956b37;
 }
+
+
 a:link {
     text-decoration: none;
   
@@ -177,46 +164,49 @@ a:link {
 a:link {
     color: rgb(6, 4, 4);
 }
-
-
-
-/* mouse sul link; a:hover DEVE venire dopo a:link e a:visited in CSS*/
+/*css footer*/
 a:hover {
-    color: hotpink;
+    color: #c09561;
+}
+
+#footer {
+    background-image: linear-gradient(to right, #f8f4ef
+    ,
+    #f8f4ef
+    );
+    color: #c09561;
+
+
+}
+
+.footer-img {
+    width: 100%;
+    
+}
+
+.footer-box {
+    padding: 20px;
+}
+
+.footer-box img {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 20px;
+}
+
+.footer-box .form-control {
+    border-radius: 20px;
+    margin-top: 25px;
+    max-width: 250px;
+}
+
+.footer-box .btn-primary {
+    border-radius: 20px;
+    margin-top: 25px;
+    box-shadow: none;
+    border: none;
+    background-color: black;
+    color: #FFE8DF;
 }
 
 
-  
-
-    #footer {
-        color: #581845;
-        background-color: #f8f9fa;
-    
-    }
-    
-    .footer-img {
-        width: 100%;
-    }
-    
-    .footer-box {
-        padding: 20px;
-    }
-    
-    .footer-box img {
-        width: 120px;
-        margin-bottom: 20px;
-    }
-    
-    .footer-box .form-control {
-        border-radius: 20px;
-        margin-top: 25px;
-        max-width: 250px;
-    }
-    
-    .footer-box .btn-primary {
-       
-        margin-top: 25px;
-        
-        border: none;
-        
-    }
