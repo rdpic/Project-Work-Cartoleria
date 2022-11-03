@@ -154,6 +154,25 @@ nav {
     box-shadow: 0 0 0 0 #956b37;
 }
 
+.btn-light {
+    background-color: #c09561;
+    color: #956f41;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 55px;
+    box-shadow: 0 6px 0 0 #8b622f;
+    transition: all 0.1s ease-in-out;
+    margin-top: 15px;
+}
+
+.btn-light:active {
+    transform: translateY(10px);
+    box-shadow: 0 0 0 0 #956b37;
+}
+
 
 a:link {
     text-decoration: none;
