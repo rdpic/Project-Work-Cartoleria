@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Creato il: Nov 03, 2022 alle 10:23
+-- Creato il: Nov 03, 2022 alle 15:04
 -- Versione del server: 5.7.34
 -- Versione PHP: 7.4.21
 
@@ -142,6 +142,7 @@ CREATE TABLE `utenti` (
   `citta` varchar(50) NOT NULL,
   `cap` varchar(5) NOT NULL,
   `provincia` varchar(2) NOT NULL,
+  `regione` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `telefono` varchar(50) NOT NULL,
   `id_profilo` int(11) DEFAULT NULL
