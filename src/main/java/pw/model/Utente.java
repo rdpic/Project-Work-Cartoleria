@@ -44,8 +44,12 @@ public class Utente implements Serializable {
 	@Pattern(regexp = "[a-zA-Z\\s']{1,50}", message = "{error.charnotallowed}")
 	private String citta;
 	
+	@Column(name = "regione", length = 50, nullable = false)
+	@Pattern(regexp = "[a-zA-Z0-9\\s]{1,50}", message = "{error.charnotallowed}")
+	private String regione;
+	
 	@Column(name = "cap", length = 5, nullable = false)
-	@Pattern(regexp = "[a-zA-Z\\s']{1,5}", message = "{error.charnotallowed}")
+	@Pattern(regexp = "[0-9\\s]{1,5}", message = "{error.charnotallowed}")
 	private String cap;
 	
 	@Column(name = "provincia", length = 2, nullable = false)
@@ -154,6 +158,14 @@ public class Utente implements Serializable {
 
 	public void setListaOrdini(List<Ordine> listaOrdini) {
 		this.listaOrdini = listaOrdini;
+	}
+
+	public String getRegione() {
+		return regione;
+	}
+
+	public void setRegione(String regione) {
+		this.regione = regione;
 	}
 	
 }

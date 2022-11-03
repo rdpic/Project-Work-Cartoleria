@@ -24,14 +24,10 @@ public class FormController {
 	@Autowired
 	private UtenteDao utenteDao;
 	
-	@Autowired
-	private ProfiloDao profiloDao;
-	
 	@GetMapping
-	public String getPage(Model model, @RequestParam(name = "id", required = false) Integer id) {
-		Utente utente = id == null ? new Utente() : utenteDao.findById(id).get();
+	public String getPage(Model model) {
 		model.addAttribute("title", "Form Registrazione");
-		model.addAttribute("utente", utente);
+		model.addAttribute("utente", new Utente());
 		model.addAttribute("utenti", utenteDao.findAll());
 		return "Form";
 	}
@@ -39,13 +35,7 @@ public class FormController {
 	@PostMapping
 	public String registraUtente(@Valid @ModelAttribute("utente") Utente utente, BindingResult result) {
 		if (result.hasErrors())
-			return "/";
-		if (utente.getId() != 0) {
-			Profilo profilo = profiloDao.findById(utente.getId()).get();
-			profilo.setUsername(utente.getProfilo().getUsername());
-			profilo.setPassword(utente.getProfilo().getPassword());
-			utente.setProfilo(profilo);
-		}
+			return "Form";
 		utenteDao.save(utente);
 		return "redirect:/";
 	}

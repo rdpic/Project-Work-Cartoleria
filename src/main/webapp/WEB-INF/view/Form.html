@@ -99,90 +99,90 @@
         <!--FORM INIZIO-->
         <div class="page-content">
             <div class="form-v10-content">
-                <form class="form-detail" action="#" method="post" id="myform">
+                <form class="form-detail" method="post" id="myform" th:object="${utente}">
                     <div class="form-left">
                         <h2>Informazioni Iscrizione</h2>
                         <div class="form-row">
                         </div>
                         <div class="form-group">
                             <div class="form-row form-row-1">
-                                <input type="text" name="first_name" id="first_name" class="input-text"
+                                <input type="text" th:field="*{nome}" id="first_name" class="input-text"
                                     placeholder="Nome" required>
-                                <!-- <p th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" 
-									class="text-danger"></p> -->
+                                <p th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" 
+									class="text-danger"></p>
                             </div>
                             <div class="form-row form-row-2">
-                                <input type="text" name="last_name" id="last_name" class="input-text"
+                                <input type="text" th:field="*{cognome}" id="last_name" class="input-text"
                                     placeholder="Cognome" required>
-                               <!-- <p th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}" 
-									class="text-danger"></p> -->
+                                <p th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}" 
+									class="text-danger"></p>
                             </div>
 
                         </div>
                         
                         <div class="form-row form-row-3">
-	                        <input type="text" name="username" id="username" class="input-text"
+	                        <input type="text"  id="username" class="input-text" th:field="*{profilo.username}"
 	                                    placeholder="Username" required>
-	                       <!-- <p th:if="${#fields.hasErrors('profilo.username')}" th:errors="*{profilo.username}" 
-									class="text-danger"></p> -->
+	                       <p th:if="${#fields.hasErrors('profilo.username')}" th:errors="*{profilo.username}" 
+									class="text-danger"></p>
 						</div>
                         <div class="form-row">
-                            <input type="password" name="password" id="password" class="input-password" placeholder="Password"
+                            <input type="password" th:field="*{profilo.password}" id="password" class="input-password" placeholder="Password"
                                 required>
-                           <!-- <p th:if="${#fields.hasErrors('profilo.password')}" th:errors="*{profilo.password}" 
-									class="text-danger"></p> -->
+                            <p th:if="${#fields.hasErrors('profilo.password')}" th:errors="*{profilo.password}" 
+									class="text-danger"></p>
                         </div>
                             <div class="form-row form-row-4">
-                                <input type="text" name="your_email" id="your_email" class="input-text" required
+                                <input type="text" th:field="*{email}" id="your_email" class="input-text" required
                                     pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="E-mail">
-                                <!-- <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" 
-									class="text-danger"></p> -->  
+                                 <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" 
+									class="text-danger"></p> 
                             </div>
                     </div>
                     <div class="form-right">
                         <h2>Informazioni Spedizione</h2>
                         <div class="form-row">
-                            <input type="text" name="street" class="street" id="street" placeholder="Via + Numero"
+                            <input type="text" th:field="*{indirizzo}" class="street" id="street" placeholder="Via + Numero"
                                 required>
-                            <!-- <p th:if="${#fields.hasErrors('indirizzo')}" th:errors="*{indirizzo}" 
-									class="text-danger"></p> -->
+                            <p th:if="${#fields.hasErrors('indirizzo')}" th:errors="*{indirizzo}" 
+									class="text-danger"></p>
                         </div>
                         <div class="form-group">
                             <div class="form-row form-row-1">
-                                <input type="text" name="zip" class="zip" id="zip" placeholder="Codice Postale"
+                                <input type="text" th:field="*{cap}" class="zip" id="zip" placeholder="Codice Postale"
                                     required>
-                                <!-- <p th:if="${#fields.hasErrors('cap')}" th:errors="*{cap}" 
-									class="text-danger"></p> -->
+                                <p th:if="${#fields.hasErrors('cap')}" th:errors="*{cap}" 
+									class="text-danger"></p>
                             </div>
                             <div class="form-row form-row-2">
-                                <input type="text" name="Comune" placeholder="Comune, es. RM" required >
+                                <input type="text" th:field="*{citta}" placeholder="Comune, es. RM" required>
                                 
                                 
                             </div>
                         </div>
                         <div class="form-row">
-                            <select name="Regione">
-                                <option value="Regione" selected disabled>-- Regione --</option>
-                                <option value="Abruzzo">Abruzzo</option>
-                                <option value="Basilicata">Basilicata</option>
-                                <option value="Calabria">Calabria</option>
-                                <option value="Campania">Campania</option>
-                                <option value="Emilia">Emilia Romagna</option>
-                                <option value="Friuli">Friuli Venezia Giulia</option>
-                                <option value="Lazio">Lazio</option>
-                                <option value="Liguria">Liguria</option>
-                                <option value="Lombardia">Lombardia</option>
-                                <option value="Marche">Marche</option>
-                                <option value="Molise">Molise</option>
-                                <option value="Piemonte">Piemonte</option>
-                                <option value="Puglia">Puglia</option>
-                                <option value="Sardegna">Sardegna</option>
-                                <option value="Sicilia">Sicilia</option>
-                                <option value="Lazio">Toscana</option>
-                                <option value="Trentino">Trentino Alto Adige</option>
-                                <option value="Umbria">Umbria</option>
-                                <option value="Aosta">Val d'Aosta</option>
-                                <option value="Veneto">Veneto</option>
+                            <select th:field="*{regione}">
+                                <option th:value="Regione" selected disabled>-- Regione --</option>
+                                <option th:value="Abruzzo">Abruzzo</option>
+                                <option th:value="Basilicata">Basilicata</option>
+                                <option th:value="Calabria">Calabria</option>
+                                <option th:value="Campania">Campania</option>
+                                <option th:value="Emilia">Emilia Romagna</option>
+                                <option th:value="Friuli">Friuli Venezia Giulia</option>
+                                <option th:value="Lazio">Lazio</option>
+                                <option th:value="Liguria">Liguria</option>
+                                <option th:value="Lombardia">Lombardia</option>
+                                <option th:value="Marche">Marche</option>
+                                <option th:value="Molise">Molise</option>
+                                <option th:value="Piemonte">Piemonte</option>
+                                <option th:value="Puglia">Puglia</option>
+                                <option th:value="Sardegna">Sardegna</option>
+                                <option th:value="Sicilia">Sicilia</option>
+                                <option th:value="Lazio">Toscana</option>
+                                <option th:value="Trentino">Trentino Alto Adige</option>
+                                <option th:value="Umbria">Umbria</option>
+                                <option th:value="Aosta">Val d'Aosta</option>
+                                <option th:value="Veneto">Veneto</option>
                             </select>
                             <span class="select-btn">
                                 <i class="zmdi zmdi-chevron-down"></i>
@@ -190,15 +190,15 @@
                         </div>
                         <div class="form-group">
                             <div class="form-row form-row-1">
-                                <input type="text" name="code" class="code" id="code" placeholder="Provincia" required>
-                                <!-- <p th:if="${#fields.hasErrors('provincia')}" th:errors="*{provincia}" 
-									class="text-danger"></p> -->
+                                <input type="text" th:field="*{provincia}" class="code" id="code" placeholder="Provincia" required>
+                                <p th:if="${#fields.hasErrors('provincia')}" th:errors="*{provincia}" 
+									class="text-danger"></p>
                             </div>
                             <div class="form-row form-row-2">
-                                <input type="text" name="phone" class="phone" id="phone" placeholder="Numero Telefono"
+                                <input type="text" th:field="*{telefono}" class="phone" id="phone" placeholder="Numero Telefono"
                                     required>
-                                <!-- <p th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}" 
-									class="text-danger"></p> -->
+                                <p th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}" 
+									class="text-danger"></p>
                             </div>
                         </div>
 
@@ -219,7 +219,7 @@
 
                 <!--FOOTER-->
                 <section id="footer">
-                    <img src="static/image/wave1.png" class="footer-img" />
+                    <img th:src="@{static/image/wave1.png}" class="footer-img" />
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4 footer-box">
