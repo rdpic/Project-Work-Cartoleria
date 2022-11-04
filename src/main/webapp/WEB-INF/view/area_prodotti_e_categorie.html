@@ -25,7 +25,7 @@
         <!--INIZIO NAVBAR-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: -20px;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img id="logo" src="Cancelleria ArtSquare.png" alt="logo"></a>
+                <a class="navbar-brand" href="area_admin.html"><img id="logo" src="Cancelleria_ArtSquare.png" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -33,118 +33,65 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
-                                Home
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Homepage</a></li>
-                                <li><a class="dropdown-item" href="Shop.html">Offerte</a></li>
-                                <li><a class="dropdown-item" href="#">Lavora con noi</a></li>
-                                <!--form da inserire per cv e mail-->
-
-
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
-                                Categorie
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="cancelleria.html">Cancelleria</a></li>
-                                <li><a class="dropdown-item" href="carta.html">Carta</a></li>
-                                <li><a class="dropdown-item" href="#">Cartucce e Toner</a></li>
-                                <li><a class="dropdown-item" href="#">Macchine ufficio</a></li>
-                                <li><a class="dropdown-item" href="#">Spedizione</a></li>
-                                <li><a class="dropdown-item" href="#">Informatica</a></li>
-
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
-                                Accessori
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Work in progress</a></li>
-                                
-
-                            </ul>
-                        </li>
-                        
-                        <li class="nav-item dropdown">
-                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
-                                Contattaci
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Instagram</a></li>
-                                <li><a class="dropdown-item" href="#">Facebook</a></li>
-                                <li><a class="dropdown-item" href="#">Twitter</a></li>
-                                <li><a class="dropdown-item" href="#">Whatsapp</a></li>
-                                <li><a class="dropdown-item" href="#">Gmail</a></li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                    <button type="button" class="btn btn-light">Login</button>
-                    <button type="button" class="btn btn-light">Registrati</button>
-                    
-
-
-                </div>
+                        <li class="nav-item" >
+                            <a class="nav-link" href="area_ordini.html">Gestione Ordinativi</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="area_clienti.html">Gestione Clienti</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Gestione Categorie</a>
+                          </li>
+                    </div>
             </div>
         </nav>
         <!--FINE NAVBAR-->
-
-        <h3>Area Prodotti e Categorie</h3>
-            <table class="table_prodotti e categorie">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Titolo</th>
-                    <th scope="col">Descrizione</th>
-                    <th scope="col">Gallery</th>
-                    <th scope="col">Pubblicato</th>
-                    <th scope="col">Categoria</th>
-                  
+        <section ><h2>AREA ADMIN</h2></section>
+      <!--inizio table prodotti-->
     
-                  </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                   
-                  </tbody>
-                </table>
-                <div class="div_button">
-                    <button type="button" class="btn btn-light ">Modifica</button>
-                    <button type="button" class="btn btn-light ">Elimina</button>
-                    </div>
+      <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Titolo</th>
+                <th scope="col">Descrizione</th>
+                <th scope="col">Gallery</th>
+                <th scope="col">Pubblicato</th>
+                <th scope="col">Categoria</th>
+                
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td> <button type="button" class="btn btn-light ">Modifica</button>
+                    <button type="button" class="btn btn-light ">Elimina</button></td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td> <button type="button" class="btn btn-light ">Modifica</button>
+                    <button type="button" class="btn btn-light ">Elimina</button></td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td> <button type="button" class="btn btn-light ">Modifica</button>
+                    <button type="button" class="btn btn-light ">Elimina</button></td>
+            </tr>
+        </tbody>
+    </table>  
+     
 
                       <!--FOOTER-->
         <section id="footer">
@@ -152,7 +99,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 footer-box">
-                        <img src="Cancelleria ArtSquare.png">
+                        <img src="Cancelleria_ArtSquare.png">
                         <!--logo-->
                         <p>© Cartoleria ArtSquare. All Rights Reserved
                         </p>
