@@ -208,16 +208,16 @@ a {
     color:   #FFE8DF;
    
     
-    }
-    h4,li,ul
-    {list-style: none;
-        text-decoration: none;
-        color:   #FFE8DF;
+}
+h4,li,ul{
+    list-style: none;
+    text-decoration: none;
+    color: #FFE8DF;
        
         
-        }
-    ul, li{
-        margin-top: 30px;
-        color:  #c09561;
-        padding-left: 20px;
-        }
+}
+ul, li{
+	margin-top: 30px;
+    color:  #c09561;
+    padding-left: 20px;
+}

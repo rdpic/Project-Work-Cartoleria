@@ -41,7 +41,6 @@
                         <th th:text="#{label.name}" scope="col"></th>
                         <th th:text="#{label.surname}" scope="col"></th>
                         <th th:text="#{label.username}" scope="col"></th>
-                        <th th:text="#{label.password}" scope="col"></th>
                         <th th:text="#{label.email}" scope="col"></th>
                         <th></th>
                     </tr>
@@ -51,10 +50,9 @@
 						<td th:text="${c.nome}"></td>
 						<td th:text="${c.cognome}"></td>
 						<td th:text="${c.profilo.username}"></td>
-						<td th:text="${c.profilo.password}"></td>
 						<td th:text="${c.email}"></td>
 						<td class="text-end">
-							<a th:href="@{/utenti(id=${c.id})}" class="btn btn-primary btn-sm small-button" th:text="#{btn.edit}"></a>
+							<a th:href="@{/utenti(id=${c.id})}" class="btn btn-primary btn-sm small-button" th:text="#{btn.show}"></a>
 							<a th:href="@{/confermaeliminazione(id=${c.id}, type='utente')}" class="btn btn-light btn-sm small-button" th:text="#{btn.delete}"></a>
 						</td>
 					</tr>
@@ -65,7 +63,7 @@
         </div>
         <div class="col-1"></div>
 		<div class="col-4">
-          <div class="card">
+          <div th:if="${mostraForm}" class="card">
             <div class="card-body">
                 <br class="mb-3">
                     <form method="POST" th:object="${utente}">
@@ -73,7 +71,7 @@
 							<div class="col-12">
 								<label for="name" th:text="#{label.name} + ':'"></label>
 								<input type="text" id="name" th:field="*{nome}" 
-									class="form-control" required="required">
+									class="form-control" readonly="readonly">
 								<p th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" 
 									class="text-danger"></p>
 							</div>
@@ -82,7 +80,7 @@
 							<div class="col-12">
 								<label for="cognome" th:text="#{label.surname} + ':'"></label>
 								<input type="text" id="cognome" th:field="*{cognome}" class="form-control" 
-									required="required">
+									readonly="readonly">
 								<p th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}" 
 									class="text-danger"></p>
 							</div>
@@ -91,7 +89,7 @@
 							<div class="col-12">
 								<label for="username" th:text="#{label.username} + ':'"></label>
 								<input type="text" id="username" th:field="*{profilo.username}" class="form-control" 
-									required="required">
+									readonly="readonly">
 								<p th:if="${#fields.hasErrors('profilo.username')}" th:errors="*{profilo.username}" 
 									class="text-danger"></p>
 							</div>
@@ -99,8 +97,8 @@
 						<div class="row">
 							<div class="col-12">
 								<label for="password" th:text="#{label.password} + ':'"></label>
-								<input type="password" id="password" th:field="*{profilo.password}" class="form-control" 
-									required="required">
+								<input type="text" id="password" th:field="*{profilo.password}" class="form-control" 
+									readonly="readonly">
 								<p th:if="${#fields.hasErrors('profilo.password')}" th:errors="*{profilo.password}" 
 									class="text-danger"></p>
 							</div>
@@ -109,14 +107,56 @@
 							<div class="col-12">
 								<label for="email" th:text="#{label.email} + ':'"></label>
 								<input type="text" id="email" th:field="*{email}" class="form-control" 
-									required="required">
+									readonly="readonly">
 								<p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" 
+									class="text-danger"></p>
+							</div>
+							<div class="col-12">
+								<label for="indirizzo" th:text="#{label.address} + ':'"></label>
+								<input type="text" id="indirizzo" th:field="*{indirizzo}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('indirizzo')}" th:errors="*{indirizzo}" 
+									class="text-danger"></p>
+							</div>
+							<div class="col-12">
+								<label for="citta" th:text="#{label.town} + ':'"></label>
+								<input type="text" id="citta" th:field="*{citta}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('citta')}" th:errors="*{citta}" 
+									class="text-danger"></p>
+							</div>
+							<div class="col-12">
+								<label for="regione" th:text="#{label.region} + ':'"></label>
+								<input type="text" id="regione" th:field="*{regione}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('regione')}" th:errors="*{regione}" 
+									class="text-danger"></p>
+							</div>
+							<div class="col-12">
+								<label for="cap" th:text="#{label.cap} + ':'"></label>
+								<input type="text" id="cap" th:field="*{cap}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('cap')}" th:errors="*{cap}" 
+									class="text-danger"></p>
+							</div>
+							<div class="col-12">
+								<label for="provincia" th:text="#{label.province} + ':'"></label>
+								<input type="text" id="provincia" th:field="*{provincia}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('provincia')}" th:errors="*{provincia}" 
+									class="text-danger"></p>
+							</div>
+							<div class="col-12">
+								<label for="telefono" th:text="#{label.tel} + ':'"></label>
+								<input type="text" id="telefono" th:field="*{telefono}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}" 
 									class="text-danger"></p>
 							</div>
 						</div>
 						<div class="row mt-4">
 							<div class="col-12 text-center">
-								<input type="submit" th:value="#{btn.register}" class="btn btn-primary large-button">
+								<a th:href="@{/utenti}" th:text="#{btn.back}" class="btn btn-primary large-button"></a>
 							</div>
 						</div>
 					</form>
@@ -134,13 +174,13 @@
     <section id="footer">
         <div class="pulsanti">
                 
-              <a class="a1" href="area_clienti.html">  
+              <a href="area_clienti.html">  
                 <button type="button" class="btn btn-link">Gestione Cliente</button>
               </a>
-              <a class="a1" href="area_ordini.html">  
+              <a href="area_ordini.html">  
                 <button type="button" class="btn btn-link">Gestione Ordinativo</button>
               </a>
-              <a class="a1" href="area_prodotti_e_categorie.html">  
+              <a href="area_prodotti_e_categorie.html">  
                 <button type="button" class="btn btn-link">Gestione Prodotti</button>
               </a>
 

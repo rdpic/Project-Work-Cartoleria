@@ -101,10 +101,20 @@ h3{
 /*footer*/
 a {
     color: #c09561;
+    text-decoration: none;
 }
 
 a:hover {
     color: rgb(228, 198, 163);
+}
+
+.btn-link {
+	color: #c09561;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+	 color: rgb(228, 198, 163);
 }
 
 #footer {
@@ -154,13 +164,8 @@ a:hover {
     width: 200px;
     height:500px;
     margin-top: 50px;
-}
-a{
-    text-decoration: none;
-    color:   #FFE8DF;
-   
+}   
     
-    }
     h4,li,ul
     {list-style: none;
         text-decoration: none;
