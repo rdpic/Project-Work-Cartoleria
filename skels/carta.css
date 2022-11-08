@@ -80,7 +80,7 @@ nav {
 }
 /*Rendo i pulsanti piu interattivi*/
 
-.container .btn-light {
+.container .btn-primary {
     background-color: #c09561;
     color: #956f41;
     border: none;
@@ -94,12 +94,12 @@ nav {
     margin-top: 15px;
 }
 
-.btn-light:active {
+.btn-primary:active {
     transform: translateY(10px);
     box-shadow: 0 0 0 0 #956b37;
 }
 
- .btn-light {
+ .btn-primary {
     background-color: #c09561;
     color: #956f41;
     border: none;
@@ -113,7 +113,7 @@ nav {
     margin-top: 15px;
 }
 
-.btn-light:active {
+.btn-primary:active {
     transform: translateY(10px);
     box-shadow: 0 0 0 0 #956b37;
 }
@@ -166,8 +166,8 @@ a:hover {
 .footer-box .btn-primary {
     border-radius: 20px;
     margin-top: 25px;
-    box-shadow: none;
+    box-shadow: 0 6px 0 0 #8b622f;
     border: none;
-    background-color: black;
-    color: #FFE8DF;
+    background-color: #c09561;
+    color: #956b37;
 }

@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Pattern;
 
@@ -48,6 +49,16 @@ public class Prodotto implements Serializable {
 	@JoinColumn(name = "id_categoria", referencedColumnName = "id")
 	private Categoria categoriaProdotto;
 	
+	@Transient
+	private boolean included;
+	
+	@Transient
+	private boolean image;
+	
+	public void setImage(boolean image) {
+		this.image = image;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -102,6 +113,18 @@ public class Prodotto implements Serializable {
 
 	public void setCategoriaProdotto(Categoria categoriaProdotto) {
 		this.categoriaProdotto = categoriaProdotto;
+	}
+	
+	public boolean isIncluded() {
+		return included;
+	}
+
+	public void setIncluded(boolean included) {
+		this.included = included;
+	}
+
+	public boolean isImage() {
+		return image;
 	}
 
 }

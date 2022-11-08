@@ -29,23 +29,23 @@
       opacity: 0.9;
     }
     
-    button:hover {
+    a:hover {
       opacity:1;
     }
     
 
-    .cancelbtn, .deletebtn {
+    .btn-secondary, .btn-primary {
       float: left;
       width: 50%;
     }
     
 
-    .cancelbtn {
+    .btn-secondary {
       background-color: #ccc;
       color: black;
     }
     
-    .deletebtn {
+    .btn-primary {
       background-color: #f44336;
     }
     
@@ -119,11 +119,11 @@
 		<p th:case="'ordine'" th:text="#{label.order}" class="fs-5"></p>
 	  </div> 
 	  <div>
-	  	<p class="fs-5" th:text="${elimina.descrizione}"></p>
+	  	<p class="fs-5" th:text="${elimina.description}"></p>
 	  </div>
       <div class="clearfix">
-        <a th:href="@{confermaeliminazione/eliminaoggetto}" class="deletebtn" th:text="#{btn.confirm}"></a>
-        <a th:href="@{${elimina.redirect}}" class="cancelbtn" th:text="#{btn.back"></a>
+        <a th:href="@{confermaeliminazione/eliminaoggetto}" class="btn btn-primary small-button" th:text="#{btn.confirm}"></a>
+        <a th:href="@{${elimina.redirect}}" class="btn btn-secondary small-button" th:text="#{btn.back}"></a>
       </div>
     </div>
   </form>

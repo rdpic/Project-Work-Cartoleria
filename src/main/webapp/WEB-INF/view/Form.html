@@ -21,7 +21,7 @@
         <!--INIZIO NAVBAR-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: -20px;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img id="logo" th:src="@{static/image/Cancelleria_ArtSquare.png}" alt="logo"></a>
+                <a class="navbar-brand" th:href="@{/}"><img id="logo" th:src="@{static/image/Cancelleria_ArtSquare.png}" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -35,9 +35,9 @@
                                 Home
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Homepage</a></li>
-                                <li><a class="dropdown-item" th:href=@{WEB-INF/view/Shop.html}>Offerte</a></li>
-                                <li><a class="dropdown-item" href="#">Lavora con noi</a></li>
+                                <li><a class="dropdown-item" th:href="@{/}">Homepage</a></li>
+                                <li><a class="dropdown-item" th:href="@{/shop}">Offerte</a></li>
+                                <li><a class="dropdown-item" th:href="@{/lavoraconnoi}">Lavora con noi</a></li>
                                 <!--form da inserire per cv e mail-->
 
 
@@ -49,13 +49,12 @@
                                 Categorie
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Cancelleria</a></li>
-                                <li><a class="dropdown-item" href="#">Carta</a></li>
-                                <li><a class="dropdown-item" href="#">Cartucce e Toner</a></li>
-                                <li><a class="dropdown-item" href="#">Macchine ufficio</a></li>
-                                <li><a class="dropdown-item" href="#">Spedizione</a></li>
-                                <li><a class="dropdown-item" href="#">Informatica</a></li>
-
+                                <li><a class="dropdown-item" th:href="@{/cancelleria}">Cancelleria</a></li>
+                                <li><a class="dropdown-item" th:href="@{/carta}">Carta</a></li>
+                                <li><a class="dropdown-item" th:href="@{/cartucce}">Cartucce e Toner</a></li>
+                                <li><a class="dropdown-item" th:href="@{/macchine}">Macchine ufficio</a></li>
+                                <li><a class="dropdown-item" th:href="@{/spedizione}">Spedizione</a></li>
+                                <li><a class="dropdown-item" th:href="@{/informatica}">Informatica</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -154,7 +153,7 @@
 									class="text-danger"></p>
                             </div>
                             <div class="form-row form-row-2">
-                                <input type="text" th:field="*{citta}" placeholder="Comune, es. RM" required>
+                                <input type="text" th:field="*{citta}" placeholder="Comune" required>
                                 
                                 
                             </div>
@@ -189,7 +188,7 @@
                         </div>
                         <div class="form-group">
                             <div class="form-row form-row-1">
-                                <input type="text" th:field="*{provincia}" class="code" id="code" placeholder="Provincia" required>
+                                <input type="text" th:field="*{provincia}" class="code" id="code" placeholder="Provincia, es. RM" required>
                                 <p th:if="${#fields.hasErrors('provincia')}" th:errors="*{provincia}" 
 									class="text-danger"></p>
                             </div>

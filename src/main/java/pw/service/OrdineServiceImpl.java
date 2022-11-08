@@ -26,14 +26,11 @@ public class OrdineServiceImpl implements OrdineService
 	private ProdottoService prodottoService;
 	
 	@Override
-	public void registraOrdine(Ordine ordine, Object... ordineData)
-	{
+	public void registraOrdine(Ordine ordine, Object... ordineData) {
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		try
-		{
+		try {
 			ordine.setData(format.parse((String)ordineData[0]));
-		} catch (ParseException e)
-		{
+		} catch (ParseException e) {
 			ordine.setData(new Date());
 		}
 		ordine.setUtente(utenteDao.findById(((int)ordineData[1])).get());
@@ -49,20 +46,17 @@ public class OrdineServiceImpl implements OrdineService
 	}
 
 	@Override
-	public Ordine getOrdineById(int id)
-	{
+	public Ordine getOrdineById(int id) {
 		return ordineDao.findById(id).get();
 	}
 
 	@Override
-	public List<Ordine> getOrdini()
-	{
+	public List<Ordine> getOrdini() {
 		return (List<Ordine>) ordineDao.findAll();
 	}
 
 	@Override
-	public void cancellaOrdine(Ordine ordine)
-	{
+	public void cancellaOrdine(Ordine ordine) {
 		ordine.setUtente(null);
 		ordine.setListaProdotti(null);
 		ordineDao.save(ordine);

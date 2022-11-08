@@ -21,50 +21,24 @@ html {
     width: 100%;
     height: 100%;
 }
-
-/*navbar*/
-.nav-link {
-    padding: 10px 20px 5px 20px;
-    cursor: pointer;
-    position: relative;
-    user-select: none;
-
+section {
+    max-width: 100%;
+    height: 200px;
+    width: auto;
+    margin:auto;
+    display:block;
+    background-color: #c09534;
+    color: #f8f4ef;
+    text-align: center;
+    padding: 50px;
+    
 }
 
-.nav-link::before {
-    content: "";
-    height: 3px;
-    width: 0%;
-    background-color:#c09561 ;
 
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-radius: 3px;
-    transition: all 0.1s ease-in-out;
+.btn-link {
+    font-size: 26px;
 }
 
-.nav-link:hover::before {
-
-    width: 100%;
-
-}
-
-nav {
-    height: 100px;
-    background-color: #c09561
-    ;
-
-
-}
-
-.navbar {
-    background-image: linear-gradient(to right, #f8f4ef
-    ,
-    #f8f4ef
-    );
-    color: #c09561;
-}
 
 .container .form-control {
     border-radius: 20px;
@@ -79,25 +53,29 @@ nav {
 
 }
 
-/*table */
-table,
-th,
-td {
-    margin-top: 50px;
-    border: 2px solid;
-    color: #c09561;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
+
 .btn {
     color: #c09561;
 }
-table {
-    width: 700px;
-    height: 150px;
-   position: relative;
+th{
+    width: 1px;
+    height: 1px;
+  
+
+   
 }
+header{
+    text-align: center;
+    font-size: large;
+    
+   }
+table{
+ text-align: center;
+ 
+}
+
+
+
 .div_button {
     text-align: center;
     margin-left: auto;
@@ -153,3 +131,41 @@ a:hover {
     background-color: black;
     color: #FFE8DF;
 }
+
+/*FORM*/
+form{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+/*MENU*/
+
+
+
+.sidebar-wrapper{ 
+    background-color:#c09534;
+    width: 200px;
+    height:500px;
+    margin-top: 50px;
+}
+a{
+    text-decoration: none;
+    color:   #FFE8DF;
+   
+    
+    }
+    h4,li,ul
+    {list-style: none;
+        text-decoration: none;
+        color:   #FFE8DF;
+       
+        
+        }
+    ul, li{
+        margin-top: 30px;
+        color:  #c09561;
+        padding-left: 20px;
+        }

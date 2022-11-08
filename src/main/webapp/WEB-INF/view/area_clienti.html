@@ -26,11 +26,11 @@
             <h2>PANNELLO DI AMMINISTRAZIONE</h2>
         </section>
 
-        <header>Gestione Clienti</header>
+        <header><h3>Gestione Clienti</h3></header>
 
        <!--CARD-->
-       <div class="row">
-        <div class="col-sm-6">
+       <div class="row mt-4">
+        <div class="col-7">
           <div class="card">
             <div class="card-body">
                     <!--inizio table CLIENTI-->
@@ -52,8 +52,8 @@
 						<td th:text="${c.profilo.username}"></td>
 						<td th:text="${c.email}"></td>
 						<td class="text-end">
-							<a th:href="@{/utenti(id=${c.id})}" class="btn btn-primary btn-sm small-button" th:text="#{btn.show}"></a>
-							<a th:href="@{/confermaeliminazione(id=${c.id}, type='utente')}" class="btn btn-light btn-sm small-button" th:text="#{btn.delete}"></a>
+							<a th:href="@{/utenti(id=${c.id})}" class="btn btn-light large-button" th:text="#{btn.show}"></a>
+							<a th:href="@{/confermaeliminazione(id=${c.id}, type='utente')}" class="btn btn-danger large-button" th:text="#{btn.delete}"></a>
 						</td>
 					</tr>
                 </tbody>
@@ -174,38 +174,19 @@
     <section id="footer">
         <div class="pulsanti">
                 
-              <a href="area_clienti.html">  
+              <a th:href="@{/utenti}">  
                 <button type="button" class="btn btn-link">Gestione Cliente</button>
               </a>
-              <a href="area_ordini.html">  
+              <a th:href="@{/ordini}">  
                 <button type="button" class="btn btn-link">Gestione Ordinativo</button>
               </a>
-              <a href="area_prodotti_e_categorie.html">  
+              <a th:href="@{/prodotti}">  
                 <button type="button" class="btn btn-link">Gestione Prodotti</button>
               </a>
 
      
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 footer-box">
-                    <img th:src="@{static/image/Cancelleria_ArtSquare.png}">
-                    <!--logo-->
-                    <p>© Cartoleria Moon. All Rights Reserved
-                    </p>
-                </div>
-                <div class="col-md-4 footer-box">
-                    <p><b>DOVE TROVARCI:</b></p>
-                    <p><i class="fa-solid fa-map-location"></i> Via delle Ginestre, 89 (RM)</p>
-                    <p><i class="fa fa-phone"></i> 081-540-9870</p>
-                    <p><i class="fa fa-envelope-o"></i> Moon@info.com</p>
-                </div>
-
-                <div class="col-md-4 footer-box">
-                    <p><b>ISCRIVITI ALLA NEWSLETTER</b></p>
-                    <input type="email" class="form-control" placeholder="Inserisci la tua e-mail">
-                    <button type="button" class="btn btn-light">Iscriviti</button>
-                </div>
-            </div>
-        </div>
+       
     </section>
+    </body>
+    </html>
