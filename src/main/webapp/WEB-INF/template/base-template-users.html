@@ -1,7 +1,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 	<!-- FRAMMENTO HEAD -->
-	<head th:fragment="headFragmentUser">
+	<head th:fragment="headFragment">
 		<meta charset="ISO-8859-1">
 		<title th:text="${title}"></title>
 		<meta name="viewport" content="width=! initial-scale=1.0" />
@@ -79,31 +79,69 @@
             </div>
         </nav>
 	
-		<!-- FRAMMENTO FOOTER -->
-			<footer id="footer" th:fragment="footerFragmentUser" class="py-3 my-4 mt-auto container">
-                    <img th:src="@{static/image/wave1.png}" class="footer-img" />
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4 footer-box">
-                                <img th:src="@{static/image/Cancelleria_ArtSquare.png}">
-                                <!--logo-->
-                                <p th:text="#{company.copyright}">
-                                </p>
-                            </div>
-                            <div class="col-md-4 footer-box">
-                                <p th:text="#{label.wheretofindus}"><b></b></p>
-                                <p><i class="fa-solid fa-map-location" th:text="#{company.address}"></i></p>
-                                <p th:text="#{company.phone}"><i class="fa fa-phone"></i></p>
-                                <p th:text="#{company.email}"><i class="fa fa-envelope-o"></i></p>
-                            </div>
+		<!-- FRAMMENTO FOOTER USERS -->
+		<footer id="footer" th:fragment="footerFragmentUser" class="py-3 my-4 mt-auto container">
+                   <img th:src="@{static/image/wave1.png}" class="footer-img" />
+                   <div class="container">
+                       <div class="row">
+                           <div class="col-md-4 footer-box">
+                               <img th:src="@{static/image/Cancelleria_ArtSquare.png}">
+                               <!--logo-->
+                               <p th:text="#{company.copyright}">
+                               </p>
+                           </div>
+                           <div class="col-md-4 footer-box">
+                               <p th:text="#{label.wheretofindus}"><b></b></p>
+                               <p><i class="fa-solid fa-map-location" th:text="#{company.address}"></i></p>
+                               <p th:text="#{company.phone}"><i class="fa fa-phone"></i></p>
+                               <p th:text="#{company.email}"><i class="fa fa-envelope-o"></i></p>
+                           </div>
 
-                            <div class="col-md-4 footer-box">
-                                <p th:text="#{label.newsletter}"><b></b></p>
-                                <input type="email" class="form-control" placeholder="Inserisci la tua e-mail">
-                                <button type="button" class="btn btn-light" th:text="#{btn.subscribe}">Iscriviti</button>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                           <div class="col-md-4 footer-box">
+                               <p th:text="#{label.newsletter}"><b></b></p>
+                               <input type="email" class="form-control" placeholder="Inserisci la tua e-mail">
+                               <button type="button" class="btn btn-light" th:text="#{btn.subscribe}"></button>
+                           </div>
+                       </div>
+                   </div>
+               </footer>
+                
+                <!-- FRAMMENTO FOOTER ADMIN -->
+               <section id="footer">
+     				<div class="pulsanti">
+			          <a th:href="@{/utenti}">  
+			            <button type="button" class="btn btn-link" th:text="#{label.clientsmanagement}"></button>
+			          </a>
+			          <a href="area_ordini.html">  
+			            <button type="button" class="btn btn-link" th:text="#{label.ordersmanagement}"></button>
+			          </a>
+			          <a href="area_prodotti_e_categorie.html">  
+			            <button type="button" class="btn btn-link" th:text="#{label.productsmanagement}"></button>
+			          </a>
+			    </div>
+			    
+			    <div class="container">
+                       <div class="row">
+                           <div class="col-md-4 footer-box">
+                               <img th:src="@{static/image/Cancelleria_ArtSquare.png}">
+                               <!--logo-->
+                               <p th:text="#{company.copyright}">
+                               </p>
+                           </div>
+                           <div class="col-md-4 footer-box">
+                               <p th:text="#{label.wheretofindus}"><b></b></p>
+                               <p><i class="fa-solid fa-map-location" th:text="#{company.address}"></i></p>
+                               <p th:text="#{company.phone}"><i class="fa fa-phone"></i></p>
+                               <p th:text="#{company.email}"><i class="fa fa-envelope-o"></i></p>
+                           </div>
+
+                           <div class="col-md-4 footer-box">
+                               <p th:text="#{label.newsletter}"><b></b></p>
+                               <input type="email" class="form-control" placeholder="Inserisci la tua e-mail">
+                               <button type="button" class="btn btn-light" th:text="#{btn.subscribe}"></button>
+                           </div>
+					</div>
+			      </div>
+   				</section>
 	</body>
 </html>
