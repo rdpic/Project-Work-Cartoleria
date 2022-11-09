@@ -34,7 +34,7 @@ public class FormController {
 		if (result.hasErrors())
 			return "Form";
 		utenteDao.save(utente);
-		return "redirect:/";
+		return "redirect:/registrazionesuccesso";
 	}
 	
 }

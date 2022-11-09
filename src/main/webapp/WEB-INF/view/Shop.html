@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=! initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link href="Shop.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link th:href="@{static/css/Shop.css}" rel="stylesheet" />
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/d91ccb3073.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+        <script src="https://kit.fontawesome.com/d91ccb3073.js"></script>
  
-        <title>Cartoleria ArtSquare</title>
+        <title>Cartoleria Moon</title>
 </head>
 
 <body>
@@ -24,7 +21,7 @@
         <!--INIZIO NAVBAR-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: -20px;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img id="logo" src="Cancelleria ArtSquare.png" alt="logo"></a>
+                <a class="navbar-brand" th:href="@{/}"><img id="logo" th:src="@{static/image/Cancelleria_ArtSquare.png}" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -38,9 +35,9 @@
                                 Home
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="Homepage.html">Homepage</a></li>
-                                <li><a class="dropdown-item" href="Shop.html">Offerte</a></li>
-                                <li><a class="dropdown-item" href="#">Lavora con noi</a></li>
+                               <li><a class="dropdown-item" th:href="@{/}">Homepage</a></li>
+                                <li><a class="dropdown-item" th:href="@{/shop}">Offerte</a></li>
+                                <li><a class="dropdown-item" th:href="@{/lavoraconnoi}">Lavora con noi</a></li>
                                 <!--form da inserire per cv e mail-->
 
 
@@ -52,12 +49,12 @@
                                 Categorie
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Cancelleria</a></li>
-                                <li><a class="dropdown-item" href="#">Carta</a></li>
-                                <li><a class="dropdown-item" href="#">Cartucce e Toner</a></li>
-                                <li><a class="dropdown-item" href="#">Macchine ufficio</a></li>
-                                <li><a class="dropdown-item" href="#">Spedizione</a></li>
-                                <li><a class="dropdown-item" href="#">Informatica</a></li>
+                                <li><a class="dropdown-item" th:href="@{/cancelleria}">Cancelleria</a></li>
+                                <li><a class="dropdown-item" th:href="@{/carta}">Carta</a></li>
+                                <li><a class="dropdown-item" th:href="@{/zaini}">Zaini e borse</a></li>
+                                <li><a class="dropdown-item" th:href="@{/bellearti}">Belle Arti</a></li>
+                                <li><a class="dropdown-item" th:href="@{/penne}">Penne Stilografiche</a></li>
+                                <li><a class="dropdown-item" th:href="@{/informatica}">Informatica</a></li>
 
                             </ul>
                         </li>
@@ -89,10 +86,12 @@
                         </li>
                     </ul>
 
-                    <button type="button" class="btn btn-light">Login</button>
-                    <button type="button" class="btn btn-light">Registrati</button>
-                    
-
+                   <a th:href="@{/login}">
+                        <button type="button" class="btn btn-light">Login</button>
+                    </a>
+                    <a th:href="@{/registrazione}">
+                        <button type="button" class="btn btn-light">Registrati</button>
+                    </a>
 
                 </div>
             </div>
@@ -105,7 +104,7 @@
                     <!--gy-5 aggiunge padding verticale tra le card (è un gutter)-->
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top" src="agenda.offerta.jpg" />
+                            <img class="card-img-top" th:src="@{static/image/agenda.offerta.jpg}" />
                             <div class="card-body">
                                 <h5 class="card-title"><em>Agenda 2023
                                     </em></h5>
@@ -118,7 +117,7 @@
 
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top" src="organizer.offerta.jpg" />
+                            <img class="card-img-top" th:src="@{static/image/organizer.offerta.jpg}" />
                             <div class="card-body">
                                 <h5 class="card-title"><em>Organizer
                                     </em></h5>
@@ -131,7 +130,7 @@
 
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top" src="shop.offerte.jpg" />
+                            <img class="card-img-top" th:src="@{static/image/shop.offerte.jpg}" />
                             <div class="card-body">
                                 <h5 class="card-title"><em>Shopping Bag </em></h5>
                                 <h6>Offerta - 5.99€</h6>
@@ -143,7 +142,7 @@
 
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top" src="box.colori.offerta.jpg" />
+                            <img class="card-img-top" th:src="@{static/image/box.colori.offerta.jpg}" />
                             <div class="card-body">
                                 <h5 class="card-title"><em>Box Colori a tempera</em></h5>
                                 <h6>Offerta - 25.00€</h6>
@@ -158,7 +157,7 @@
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
                             <!--immagine inserita affinchè sia ottimizzata per stare in cima alla card-->
-                            <img class="card-img-top" src="colori.a.tempera.box.offerta.jpg" />
+                            <img class="card-img-top" th:src="@{static/image/colori.a.tempera.box.offerta.jpg}" />
                             <!--corpo della-->
                             <div class="card-body">
                                 <h5 class="card-title"><em>Colori a tempera</em></h5>
@@ -171,7 +170,7 @@
 
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top" src="pennelli.pittura.offerte.jpg" />
+                            <img class="card-img-top" th:src="@{static/image/pennelli.pittura.offerte.jpg}" />
                             <div class="card-body">
                                 <h5 class="card-title"><em>Pennelli</em></h5>
                                 <h6>Offerta - 17.99€</h6>
@@ -183,7 +182,7 @@
 
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top" src="astuccio.offerta.jpg" />
+                            <img class="card-img-top" th:src="@{static/image/astuccio.offerta.jpg}" />
                             <div class="card-body">
                                 <h5 class="card-title"><em>Astuccio Smile 2pz.</em></h5>
                                 <h6>Offerta - 15.00€</h6>
@@ -195,10 +194,10 @@
 
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top" src="neon.cloud.offerta.jpg" />
+                            <img class="card-img-top" th:src="@{static/image/neon.cloud.offerta.jpg}" />
                             <div class="card-body">
                                 <h5 class="card-title"><em>Nuvola Neon</em></h5>
-                                <h6>offerta - 18.00€</h6>
+                                <h6>Offerta - 18.00€</h6>
                                 <br />
                                 <button type="button" class="btn btn-light">Acquista</button>
                             </div>
@@ -209,7 +208,7 @@
 
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top" src="lampada.hand.offerta.jpg" />
+                            <img class="card-img-top" th:src="@{static/image/lampada.hand.offerta.jpg}" />
                             <div class="card-body">
                                 <h5 class="card-title"><em>Lampada scrivania</em></h5>
                                 <h6>Offerta - 35.00€</h6>
@@ -220,7 +219,7 @@
                     </div>
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top" src="portachiavi.lego.offerta.jpg" />
+                            <img class="card-img-top" th:src="@{static/image/portachiavi.lego.offerta.jpg}" />
                             <div class="card-body">
                                 <h5 class="card-title"><em>Portachiavi Lego</em></h5>
                                 <h6>Offerta - 16.89€</h6>
@@ -234,7 +233,7 @@
 
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top" src="sunflower.offerta.jpg" />
+                            <img class="card-img-top" th:src="@{static/image/sunflower.offerta.jpg}" />
                             <div class="card-body">
                                 <h5 class="card-title"><em>Agenda Girasoli</em></h5>
                                 <h6>Offerta - 9.50€</h6>
@@ -246,7 +245,7 @@
 
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top" src="orologio.offerta.jpg" />
+                            <img class="card-img-top" th:src="@{static/image/orologio.offerta.jpg}" />
                             <div class="card-body">
                                 <h5 class="card-title"><em>Orologio</em></h5>
                                 <h6>Offerta - 27.49€</h6>
@@ -260,25 +259,22 @@
                     <!--FINE TERZA FILA DI CARD-->
                 </div>
             </div>
-
-        </div>
-    </div>
  <!--Inizio footer-->
  <section id="footer">
-    <img src="wave1.png" class="footer-img" />
+    <img th:src="@{static/image/wave1.png}" class="footer-img" />
     <div class="container">
         <div class="row">
             <div class="col-md-4 footer-box">
-                <img src="Cancelleria ArtSquare.png">
+                <img th:src="@{static/image/Cancelleria_ArtSquare.png}">
                 <!--logo-->
-                <p>© Cartoleria ArtSquare. All Rights Reserved
+                <p>© Cartoleria Moon. All Rights Reserved
                 </p>
             </div>
             <div class="col-md-4 footer-box">
                 <p><b>DOVE TROVARCI:</b></p>
                 <p><i class="fa-solid fa-map-location"></i> Via delle Ginestre, 89 (RM)</p>
                 <p><i class="fa fa-phone"></i> 081-540-9870</p>
-                <p><i class="fa fa-envelope-o"></i> ArtSquare@info.com</p>
+                <p><i class="fa fa-envelope-o"></i> Moon@info.com</p>
             </div>
 
             <div class="col-md-4 footer-box">

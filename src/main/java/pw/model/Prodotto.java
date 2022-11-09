@@ -49,6 +49,11 @@ public class Prodotto implements Serializable {
 	@JoinColumn(name = "id_categoria", referencedColumnName = "id")
 	private Categoria categoriaProdotto;
 	
+	@Override
+	public String toString() {
+		return nomeProdotto;
+	}
+
 	@Transient
 	private boolean included;
 	
