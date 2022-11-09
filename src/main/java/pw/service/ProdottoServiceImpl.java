@@ -21,6 +21,8 @@ public class ProdottoServiceImpl implements ProdottoService {
 
 	@Override
 	public void cancellaProdotto(Prodotto prodotto) {
+		prodotto.setCategoriaProdotto(null);
+		prodottoDao.save(prodotto);
 		prodottoDao.delete(prodotto);
 	}
 	

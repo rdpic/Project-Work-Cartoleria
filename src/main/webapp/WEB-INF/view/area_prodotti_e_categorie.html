@@ -52,61 +52,73 @@
             </div>
             <div class="col-1"></div>
 			<div class="col-4">
-	          <div th:if="${mostraForm}" class="card">
+	          <div class="card">
 	            <div class="card-body">
 	                <br class="mb-3">
-	                    <form method="POST" th:object="${prodotto}">
+	                    <form method="POST" action="prodotti/registra">
+	                    	<input type="hidden" th:value="${prodotto.id}" name="id">
 							<div class="row">
 								<div class="col-12">
-									<label for="nomeProdotto" th:text="#{label.description} + ':'"></label>
-									<input type="text" id="name" th:field="*{nomeProdotto}" class="form-control">
-									<p th:if="${#fields.hasErrors('nomeProdotto')}" th:errors="*{nomeProdotto}" 
-										class="text-danger"></p>
+									<label for="nomeProdotto" th:text="#{label.name} + ':'"></label>
+									<input type="text" th:value="${prodotto.nomeProdotto}" id="name" name="nomeProdotto" class="form-control" required>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-12">
 									<label for="descrizione" th:text="#{label.description} + ':'"></label>
-									<textarea style="resize:none;" id="name" th:field="*{descrizione}" class="form-control"></textarea>
-									<p th:if="${#fields.hasErrors('descrizione')}" th:errors="*{descrizione}" 
-										class="text-danger"></p>
+									<textarea style="resize:none;" th:text="${prodotto.descrizione}" id="name" name="descrizione" class="form-control" required></textarea>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-12">
 									<label for="quantita" th:text="#{label.quantity} + ':'"></label>
-									<input type="text" id="quantita" th:field="*{quantita}" class="form-control">
-									<p th:if="${#fields.hasErrors('quantita')}" th:errors="*{quantita}" 
-										class="text-danger"></p>
+									<input type="number" th:value="${prodotto.quantita}" id="quantita" name="quantita" class="form-control" required>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-12">
 									<label for="prezzo" th:text="#{label.price} + ':'"></label>
-									<input type="text" id="prezzo" th:field="*{prezzo}" class="form-control">
-									<p th:if="${#fields.hasErrors('prezzo')}" th:errors="*{prezzo}" 
-										class="text-danger"></p>
+									<input type="number" step="any" th:value="${prodotto.prezzo}" id="prezzo" name="prezzo" class="form-control" required>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-12">
 									<label for="codiceProdotto" th:text="#{label.productcode} + ':'"></label>
-									<input type="text" id="codiceProdotto" th:field="*{codiceProdotto}" class="form-control">
-									<p th:if="${#fields.hasErrors('codiceProdotto')}" th:errors="*{codiceProdotto}" 
-										class="text-danger"></p>
+									<input type="text" th:value="${prodotto.codiceProdotto}" id="codiceProdotto" name="codiceProdotto" class="form-control" required>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-12">
 									<label for="categoriaProdotto.descrizione" th:text="#{label.category} + ':'"></label>
-									<input type="text" id="categoriaProdotto.descrizione" th:field="*{categoriaProdotto.descrizione}" class="form-control">
-									<p th:if="${#fields.hasErrors('categoriaProdotto.descrizione')}" th:errors="*{categoriaProdotto.descrizione}" 
-										class="text-danger"></p>
+									<select id="categoriaProdotto.descrizione" name="categoria" class="form-select">
+										<option th:each="c: ${categorie}" th:value="${c.id}" th:text="${c.descrizione}" th:selected="${prodotto.categoriaProdotto != null AND c.id == prodotto.categoriaProdotto.id}"></option>
+									</select>
 								</div>
 							</div>
 							<div class="row mt-4">
 								<div class="col-12 text-center">
-									<a th:href="@{/prodotti}" th:text="#{btn.back}" class="btn btn-primary large-button"></a>
+									<input type="submit" th:value="'Registra'" class="btn btn-primary large-button">
+									<a th:href="@{/prodotti}" th:text="#{btn.back}" class="btn btn-secondary large-button"></a>
+								</div>
+							</div>
+						</form>
+	                </div>
+	            </div>
+	            <div class="card" th:if="${showForm != null}">
+	            <div class="card-body">
+	                <br class="mb-3">
+	                    <form method="POST" action="prodotti/immagine" enctype="multipart/form-data">
+	                    	<input type="hidden" th:value="${showForm}" name="fileName">
+							<div class="row">
+								<div class="col-12">
+									<label for="immagine" th:text="#{label.image} + ':'"></label>
+									<input type="file" id="immagine" name="image" class="form-control">
+								</div>
+							</div>
+							<div class="row mt-4">
+								<div class="col-12 text-center">
+									<input type="submit" th:value="'Carica'" class="btn btn-primary large-button">
+									<a th:href="@{/prodotti}" th:text="#{btn.back}" class="btn btn-secondary large-button"></a>
 								</div>
 							</div>
 						</form>
