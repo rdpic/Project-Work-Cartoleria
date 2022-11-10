@@ -38,6 +38,7 @@ public class FormLoginController {
 	    for (int i = 0; i < profili.size(); i++) {
 	        if (profili.get(i).getUsername().equals(username) && profili.get(i).getPassword().equals(password)) {
 	            session.setAttribute("username", username);
+	            session.setAttribute("userid", profili.get(i).getId());
 	            exists = true;
 	            break;
 	        }

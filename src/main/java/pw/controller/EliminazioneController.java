@@ -55,7 +55,7 @@ public class EliminazioneController
 				break;
 			case "ordine":
 				Ordine ordine = ordineService.getOrdineById(id);
-				eliminaOggetto = new EliminaOggetto(id, tipo, ordine.getId() + " - " + ordine.getUtente().getProfilo(), "/orders");
+				eliminaOggetto = new EliminaOggetto(id, tipo, ordine.getId() + " - " + ordine.getUtente().getProfilo(), "/ordini");
 		}
 	}
 	

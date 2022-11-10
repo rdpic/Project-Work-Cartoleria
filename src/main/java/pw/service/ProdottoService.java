@@ -7,7 +7,7 @@ import pw.model.Prodotto;
 public interface ProdottoService {
 
 	Prodotto getProdottoById(int id);
-	List<Prodotto> getProdotto();
+	List<Prodotto> getProdotto(String categoria);
 	void registraProdotto(Prodotto prodotto);
 	void cancellaProdotto(Prodotto prodotto);
 }

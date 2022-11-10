@@ -217,10 +217,8 @@
             <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" 
 									class="text-danger"></p>
 
-            <input type="submit" name="register" class="register" value="Accedi">
-            
-            <h5>Sei un Amministratore? <a th:href="@{/adminlogin}">Clicca qui!</a></h5>
-            
+            <input type="submit" name="register" class="register" value="Accedi">    
+            <a th:href="@{/adminlogin}"><h5>Sei un Amministratore?</h5></a>
         </form>
 
         <!--FORM FINE-->

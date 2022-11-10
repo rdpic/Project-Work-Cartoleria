@@ -35,7 +35,7 @@ public class OrdiniController {
 	public String getPage(Model model, @RequestParam(name = "id", required = false) Integer id) {
 		ordine = id == null ? new Ordine() : ordineService.getOrdineById(id);
 		List<Utente> utenti = (List<Utente>) utenteDao.findAll();
-		List<Prodotto> prodotti = prodottoService.getProdotto();
+		List<Prodotto> prodotti = prodottoService.getProdotto(null);
 		if(ordine.getId() != 0)
 			for(Prodotto a : prodotti)
 				for(Prodotto oa : ordine.getListaProdotti())
@@ -55,7 +55,7 @@ public class OrdiniController {
 	public String registerOrder(@RequestParam("data") String data, @RequestParam("selUtente") int utenteId, @RequestParam(name = "ordineProdotti", required = false) int[] ordineProdotti) {
 		if(ordineProdotti == null)
 			return "redirect:/ordini";
-		ordineService.registraOrdine(ordine, data, utenteId, ordineProdotti);
+	//	ordineService.registraOrdine(ordine, data, utenteId, ordineProdotti);
 		return "redirect:/ordini";
 	}
 }
