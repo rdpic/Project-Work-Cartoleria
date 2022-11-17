@@ -79,7 +79,7 @@
 						</div>
 						<div class="row">
 							<div class="col-12">
-								<label for="utente.cognome" th:text="#{label.user} + ':'"></label>
+								<label for="profilo.cognome" th:text="#{label.user} + ':'"></label>
 								<input type="text" id="utente.cognome" th:field="*{utente.cognome}" class="form-control" 
 									readonly="readonly">
 								<p th:if="${#fields.hasErrors('utente.cognome')}" th:errors="*{utente.cognome}" 

@@ -86,7 +86,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <a href="Carrello.html"><button type="button" class="btn btn-primary" data-toggle="modal"
+                     <a th:href="@{/carrello}"><button type="button" class="btn btn-primary" data-toggle="modal"
                             data-target="#cart"><i class="fas fa-shopping-cart"></i>
                               </button></a>
                     <a th:href="@{/login}">
@@ -112,7 +112,9 @@
                         <h6 th:text="${prodotto.prezzo} + ' Euro'"></h6>
                         <p th:text="${prodotto.descrizione}" class="card-text"></p>
                         <a class="add-to-cart btn btn-primary" th:href="@{dettaglio/aggiungi(id=${prodotto.id})}">Aggiungi al carrello</a>
-                        <h6 th:if="${add}">Articolo aggiunto al carrello!</h6>
+                        <br />
+                        <br />
+                        <h6 th:if="${add}"><strong>Articolo aggiunto al carrello!</strong></h6>
                         <br />
                         <a th:href="@{${redirect}}" class="btn btn-primary">Torna indietro</a>
                     </div>

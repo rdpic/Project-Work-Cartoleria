@@ -78,7 +78,80 @@ nav {
     height: 170px;
 
 }
+/*Rendo i pulsanti piu interattivi*/
 
+.container .btn-primary {
+    background-color: #c09561;
+    color: #956f41;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 55px;
+    box-shadow: 0 6px 0 0 #8b622f;
+    transition: all 0.1s ease-in-out;
+    margin-top: 15px;
+}
+
+.btn-primary:active {
+    transform: translateY(10px);
+    box-shadow: 0 0 0 0 #956b37;
+}
+
+ .btn-primary {
+    background-color: #c09561;
+    color: #956f41;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 55px;
+    box-shadow: 0 6px 0 0 #8b622f;
+    transition: all 0.1s ease-in-out;
+    margin-top: 15px;
+}
+
+.btn-primary:active {
+    transform: translateY(10px);
+    box-shadow: 0 0 0 0 #956b37;
+}
+.btn-primary:hover {
+    color: #8b622f;
+    background-color: #f8f4ef;
+}
+a:link {
+    text-decoration: none;
+  
+}
+
+
+/*conferma ordine*/
+.card{
+background-color: #f8f4ef;
+width: 300px;
+
+border: none;
+border-radius: 16px;
+
+}
+
+.info{
+  line-height: 19px;
+}
+
+.name{
+color: #8b622f;
+font-size: 18px;
+font-weight: 600;
+}
+
+.order{
+font-size: 14px;
+font-weight: 400;
+color: #6f4b1f;
+}
 .detail{
 
 line-height:19px;
@@ -92,7 +165,52 @@ font-weight: 400;
 font-size: 13px;
 }
 
-.wrap{
+
+
+.text{
+
+line-height:15px;
+}
+.new{
+
+color: #956b37;
+font-size: 14px;
+font-weight: 600;
+}
+.money{
+
+
+font-size: 14px;
+font-weight:500;
+}
+.address{
+
+color: #956b37;
+font-weight:500;
+font-size:14px;
+}
+
+.last{
+
+font-size: 10px;
+font-weight: 500;
+
+}
+
+
+.address-line{
+color: #8b622f;
+font-size: 11px;
+font-weight: 700;
+}
+/*css animazione furgoncino*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .wrap{
     position: sticky;
     height: 50px;
     bottom: 100px;
@@ -143,58 +261,7 @@ font-size: 13px;
       left: 60%;
     }
   }
-/*Rendo i pulsanti piu interattivi*/
 
-.container .btn-primary {
-    background-color: #c09561;
-    color: #956f41;
-    border: none;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none;
-    border-radius: 55px;
-    box-shadow: 0 6px 0 0 #8b622f;
-    transition: all 0.1s ease-in-out;
-    margin-top: 15px;
-}
-
-.btn-primary:active {
-    transform: translateY(10px);
-    box-shadow: 0 0 0 0 #956b37;
-}
-
- .btn-primary {
-    background-color: #c09561;
-    color: #956f41;
-    border: none;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none;
-    border-radius: 55px;
-    box-shadow: 0 6px 0 0 #8b622f;
-    transition: all 0.1s ease-in-out;
-    margin-top: 15px;
-}
-
-.btn-primary:active {
-    transform: translateY(10px);
-    box-shadow: 0 0 0 0 #956b37;
-}
-.btn-primary:hover {
-    color: #8b622f;
-    background-color: #f8f4ef;
-}
-a:link {
-    text-decoration: none;
-  
-}
-
-/* link non visitato */
-a:link {
-    color: rgb(6, 4, 4);
-}
 /*css footer*/
 a:hover {
     color: #c09561;

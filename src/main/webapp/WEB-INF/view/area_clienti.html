@@ -96,15 +96,6 @@
 						</div>
 						<div class="row">
 							<div class="col-12">
-								<label for="password" th:text="#{label.password} + ':'"></label>
-								<input type="text" id="password" th:field="*{profilo.password}" class="form-control" 
-									readonly="readonly">
-								<p th:if="${#fields.hasErrors('profilo.password')}" th:errors="*{profilo.password}" 
-									class="text-danger"></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-12">
 								<label for="email" th:text="#{label.email} + ':'"></label>
 								<input type="text" id="email" th:field="*{email}" class="form-control" 
 									readonly="readonly">

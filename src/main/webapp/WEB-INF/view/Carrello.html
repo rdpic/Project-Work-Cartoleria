@@ -143,7 +143,7 @@
                     <div class="card-body">
                       <p><strong>Tipi di pagamento accettati</strong></p>
                       
-                      <img class="me-2" width="45px"
+                      <img class="me-2" width="60px"
                         src="https://www.paypalobjects.com/webstatic/mktg/logo-center/PP_Acceptance_Marks_for_LogoCenter_266x142.png"
                         alt="PayPal acceptance mark" />
                     </div>
@@ -167,13 +167,21 @@
                           <span><strong></strong></span>
                         </li>
                       </ul>
-          
+          			   <a href="https://www.paypal.com/it/signin" class="btn btn-primary btn-lg btn-block" target="_blank">Paga con PayPal</a>
                        <a th:href="@{carrello/confermaordine}" class="btn btn-primary btn-lg btn-block">
-                       Conferma Ordine
+                       	Conferma Ordine
                       </a>
                     <div th:if="${sent}">
-                    	<p>Ordine Inviato!</p>
-                    	<a href="https://www.paypal.com/it/signin">Paga con PayPal</a>
+                    	<br />
+                    	<br />
+                    	<div class="wrap">
+	                        <img class="image truck-img" src="https://learndesigntutorial.com/wp-content/uploads/2021/03/truck.png" alt="">
+	                        <img class="image box-img" src="https://learndesigntutorial.com/wp-content/uploads/2021/03/box.png" alt="">
+	                        <img class="image box-img box-img2" src="https://learndesigntutorial.com/wp-content/uploads/2021/03/box.png" alt="">
+                    	</div>
+                    	<div class="detail">
+                   			<span class="d-block summery">Stiamo preparando il tuo ordine!</span>
+                		</div>
                     </div>
                     </div>
                   </div>
